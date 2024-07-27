@@ -7,8 +7,8 @@ export const submitPollData = async (postData: PollItem[]) => {
       "https://jsonplaceholder.typicode.com/posts",
       postData
     );
-    if (response.status === 201) {
-      localStorage.setItem("pollSteps", JSON.stringify(response.data.data));
+    if (response.status === 201 && response?.data) {
+      localStorage.setItem("pollSteps", JSON.stringify(response.data));
       return response;
     } else {
       throw new Error(`Failed to post data. Status code: ${response.status}`);
