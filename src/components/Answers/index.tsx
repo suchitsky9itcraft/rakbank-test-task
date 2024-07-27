@@ -13,13 +13,13 @@ const Answers: React.FC<AnswersProps> = ({ answers }) => {
   }
   return (
     <div className="p-4 bg-white rounded-lg shadow-md">
-      <div className="text-2xl font-bold mb-4 bg-main text-white p-2 rounded-md">
+      <div className="p-2 mb-4 text-2xl font-bold text-white rounded-md bg-main">
         Answers
       </div>
       {answers.map((item, index) => (
         <div key={index} className="mb-2 text-left">
-          <b className="font-semibold text-gray-700 text-lg">{item.text}</b>:{" "}
-          <b className="font-semibold text-blue-600 text-lg">{item.answer}</b>
+          <b className="text-lg font-semibold text-gray-700">{item.title}</b>:{" "}
+          <b className="text-lg font-semibold text-blue-600">{item.answer}</b>
         </div>
       ))}
     </div>

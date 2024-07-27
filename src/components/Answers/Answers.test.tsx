@@ -4,27 +4,27 @@ import Answers from "./";
 
 const mockAnswers = [
   {
-    text: "Answer 1",
+    title: "Answer 1",
     id: 1,
     answer: "Yes",
-    reactions: [
+    options: [
       { reaction: "Like", icon: "👍", tooltip: "Like this answer" },
       { reaction: "Love", icon: "❤️", tooltip: "Love this answer" },
     ],
   },
   {
-    text: "Answer 2",
+    title: "Answer 2",
     id: 2,
     answer: "No",
-    reactions: [
+    options: [
       { reaction: "Dislike", icon: "👎", tooltip: "Dislike this answer" },
     ],
   },
   {
-    text: "Answer 3",
+    title: "Answer 3",
     id: 3,
     answer: "Maybe",
-    reactions: [],
+    options: [],
   },
 ];
 
@@ -33,7 +33,7 @@ describe("Answers Component", () => {
     render(<Answers answers={mockAnswers} />);
     expect(screen.getByText("Answers")).toBeInTheDocument();
     mockAnswers.forEach((item) => {
-      expect(screen.getByText(item.text)).toBeInTheDocument();
+      expect(screen.getByText(item.title)).toBeInTheDocument();
       expect(screen.getByText(item.answer)).toBeInTheDocument();
     });
   });

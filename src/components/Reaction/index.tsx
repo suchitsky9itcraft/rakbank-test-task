@@ -20,11 +20,11 @@ const Reactions: React.FC<ReactionsProps> = ({
       {items.map((item) => (
         <div
           key={item.reaction}
-          className="group flex flex-col items-center text-5xl cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-95 active:scale-90"
+          className="flex flex-col items-center text-5xl transition-transform duration-100 ease-in-out transform cursor-pointer group hover:scale-95 active:scale-90"
           onClick={() => onClick(item.icon)}
         >
           {item.icon}
-          <span className="text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out text-main">
+          <span className="mt-4 text-sm transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-100 text-main">
             {item.tooltip}
           </span>
         </div>

@@ -1,8 +1,8 @@
 import { ReactionItem } from "../Reaction";
 
 export type PollItem = {
-  text: string;
+  title: string;
   id: number;
   answer: string;
-  reactions: ReactionItem[];
+  options: ReactionItem[];
 };

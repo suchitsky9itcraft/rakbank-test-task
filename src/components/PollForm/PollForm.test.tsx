@@ -51,7 +51,7 @@ describe("PollForm Component", () => {
       if (i + 1 < pollSteps.length) {
         // eslint-disable-next-line jest/no-conditional-expect
         expect(
-          screen.getByText(pollSteps[i + 1]?.text || "")
+          screen.getByText(pollSteps[i + 1]?.title || "")
         ).toBeInTheDocument();
       }
     }
@@ -72,7 +72,7 @@ describe("PollForm Component", () => {
       if (i + 1 < pollSteps.length) {
         // eslint-disable-next-line jest/no-conditional-expect
         expect(
-          screen.getByText(pollSteps[i + 1]?.text || "")
+          screen.getByText(pollSteps[i + 1]?.title || "")
         ).toBeInTheDocument();
       }
     }
